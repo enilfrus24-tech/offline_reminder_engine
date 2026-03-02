@@ -1,0 +1,14 @@
+name: example
+description: Demo app for reminder engine
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  offline_reminder_engine:
+    path: ../
+
+  android_intent_plus: ^5.1.0
