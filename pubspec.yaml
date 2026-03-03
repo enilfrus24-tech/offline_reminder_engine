@@ -1,0 +1,23 @@
+name: offline_reminder_engine
+description: Offline task scheduler and persistent notification engine for Flutter apps.
+version: 0.1.0
+
+homepage: https://github.com/enilfrus24-tech/offline_reminder_engine
+repository: https://github.com/enilfrus24-tech/offline_reminder_engine
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
