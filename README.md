@@ -1,28 +1,25 @@
 Offline Reminder Engine
 
-Reliable offline reminders for Flutter using Android exact alarms.
+Reliable Flutter offline notifications and reminders using Android exact alarms.
 
-A lightweight Flutter engine that schedules reminders which fire even when the app is:
+This project solves a common Flutter problem: scheduling notifications that still fire when the app is closed, running in the background, or after a device reboot.
 
-• Closed
-• Running in the background
-• Restarted after device reboot
+Many reminder implementations rely on background workers which can be delayed or killed by OEM battery optimizations (Xiaomi, Oppo, etc).
+This engine avoids that problem by scheduling notifications directly through Android’s alarm system.
 
 No internet connection required.
-
-Many reminder implementations fail when apps are killed or devices restart.
-This engine uses Android exact alarm scheduling to ensure reminders remain reliable.
 
 ---
 
 Features
 
-- Reliable offline reminder scheduling
-- Uses Android exact alarm clock scheduling
-- Works when the app is closed
-- Survives device reboot
-- Supports daily repeating reminders
-- Simple developer-friendly API
+✓ Reliable offline reminder scheduling
+✓ Uses Android alarm system for triggering notifications
+✓ Works when the app is closed
+✓ Survives device reboot
+✓ Supports repeating reminders (daily)
+✓ Lightweight and simple API
+✓ Designed for reminder-style apps
 
 ---
 
@@ -41,7 +38,7 @@ Import the engine:
 
 import 'package:offline_reminder_engine/offline_reminder_engine.dart';
 
-Initialize the reminder system when your app starts:
+Initialize notifications when your app starts:
 
 await NotificationService.init();
 
@@ -57,13 +54,30 @@ await ReminderManager.schedule(reminder);
 
 ---
 
+How It Works
+
+Instead of relying on background execution, reminders are scheduled using Android’s native alarm system.
+
+The engine uses:
+
+- "flutter_local_notifications"
+- "zonedSchedule"
+- device timezone handling
+- exact alarm permissions
+- alarm rescheduling after reboot
+
+This allows reminders to fire even if the app is not running.
+
+---
+
 Example Use Cases
 
-- Habit reminder apps
-- Medication reminders
-- Pet care reminders
-- Offline todo apps
-- Alarm-style utilities
+• Habit reminder apps
+• Medication reminder apps
+• Pet care reminders
+• Offline todo apps
+• Alarm-style utilities
+• Personal productivity apps
 
 ---
 
@@ -78,9 +92,10 @@ Support the Project
 
 If this engine saves you development time or helps your project, consider supporting development.
 
-☕ https://buymeacoffee.com/enilfrus
+☕ Buy me a coffee:
+https://buymeacoffee.com/enilfrus
 
-⭐ If this project helps you, consider starring the repository.
+Even a small donation helps support further development and improvements.
 
 ---
 
