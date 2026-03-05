@@ -94,14 +94,6 @@ No internet connection required.
 
 ---
 
-Demo
-
-Reminder firing on a real Android device even when the app is closed.
-
-"Reminder Demo" (https://raw.githubusercontent.com/enilfrus24-tech/offline_reminder_engine/main/Screenshot_20260305_081706_One%20UI%20Home.jpg)
-
----
-
 Features
 
 ✓ Offline reminder scheduling
