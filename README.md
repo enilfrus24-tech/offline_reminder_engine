@@ -23,6 +23,13 @@ Features
 
 ---
 
+## Demo
+
+Reminder firing on a real Android device even when the app is closed.
+
+![Reminder Demo]("Screenshot_20260305_081706_One UI Home.jpg")
+
+
 Installation
 
 Add the engine to your "pubspec.yaml":
