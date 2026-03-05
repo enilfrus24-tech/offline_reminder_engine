@@ -17,10 +17,7 @@ class NotificationService {
     if (_initialized) return;
 
     tz.initializeTimeZones();
-
-    // IMPORTANT: set device timezone
-    tz.setLocalLocation(tz.getLocation('Asia/Makassar'));
-
+    tz.setLocalLocation(tz.local);
     const androidSettings =
     AndroidInitializationSettings('@mipmap/ic_launcher');
 

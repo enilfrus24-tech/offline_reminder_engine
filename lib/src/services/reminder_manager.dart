@@ -3,6 +3,11 @@ import 'notification_service.dart';
 
 class ReminderManager {
 
+  /// Initialize reminder engine
+  static Future<void> initialize() async {
+    await NotificationService.init();
+  }
+
   /// Schedule reminder
   static Future<void> schedule(Reminder reminder) async {
 

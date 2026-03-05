@@ -7,8 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Initialize notification engine
-  await NotificationService.init();
-
+  await ReminderManager.initialize();
   // Request Android notification permission
   await requestNotificationPermission();
 
