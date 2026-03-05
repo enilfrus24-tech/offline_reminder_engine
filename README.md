@@ -22,12 +22,11 @@ Features
 ✓ Designed for reminder-style apps
 
 ---
-
 ## Demo
 
 Reminder firing on a real Android device even when the app is closed.
 
-![Reminder Demo]("Screenshot_20260305_081706_One UI Home.jpg")
+![Reminder Demo](Screenshot_20260305_081706_One%20UI%20Home.jpg)
 
 
 Installation
@@ -83,8 +82,80 @@ Example Use Cases
 • Medication reminder apps
 • Pet care reminders
 • Offline todo apps
-• Alarm-style utilities
-• Personal productivity apps
+Offline Reminder Engine
+
+A lightweight Flutter engine for scheduling reliable offline reminders that fire even when the app is:
+
+• Closed
+• In the background
+• After device reboot
+
+No internet connection required.
+
+---
+
+Demo
+
+Reminder firing on a real Android device even when the app is closed.
+
+"Reminder Demo" (https://raw.githubusercontent.com/enilfrus24-tech/offline_reminder_engine/main/Screenshot_20260305_081706_One%20UI%20Home.jpg)
+
+---
+
+Features
+
+✓ Offline reminder scheduling
+✓ Android alarm-clock level reliability
+✓ Works when the app is closed
+✓ Survives device reboot
+✓ Daily repeating reminders
+✓ Lightweight simple API
+✓ Designed for reminder-style apps
+
+---
+
+Installation
+
+Add the engine to your "pubspec.yaml":
+
+offline_reminder_engine:
+path: ../offline_reminder_engine
+
+Then run:
+
+flutter pub get
+
+---
+
+Basic Usage
+
+Import the engine:
+
+import 'package:offline_reminder_engine/offline_reminder_engine.dart';
+
+Initialize notifications on app start:
+
+await NotificationService.init();
+
+Schedule a reminder:
+
+final reminder = Reminder(
+id: "test",
+type: "Feed the dog",
+time: DateTime.now().add(Duration(minutes: 10)),
+);
+
+await ReminderManager.schedule(reminder);
+
+---
+
+Example Use Cases
+
+• Habit reminder apps
+• Medication reminders
+• Pet care reminders
+• Offline todo apps
+• Alarm style utilities
 
 ---
 
@@ -97,12 +168,10 @@ iOS (future support)
 
 Support the Project
 
-If this engine saves you development time or helps your project, consider supporting development.
+If this project helps you, consider supporting development.
 
-☕ Buy me a coffee:
+Buy me a coffee:
 https://buymeacoffee.com/enilfrus
-
-Even a small donation helps support further development and improvements.
 
 ---
 
