@@ -1,3 +1,5 @@
+⭐ If you find this project useful, consider starring the repository.
+
 # Reliable Offline Reminders for Flutter
 
 A lightweight Flutter engine for scheduling **reliable offline reminders** that trigger even when:
@@ -37,6 +39,24 @@ This engine schedules reminders using the Android alarm system so notifications 
 ✓ Designed for reminder-style apps  
 
 ---
+
+## Project Status
+
+This project is currently in early development.
+
+The engine is already used in a real application and is being extracted into a reusable Flutter package. Feedback and contributions are welcome.
+
+---
+
+## Roadmap
+
+Planned improvements:
+
+- Weekly repeating reminders
+- Custom recurrence schedules
+- Optional persistent reminder storage
+- iOS support
+- Future publication on pub.dev
 
 ## Installation
 
